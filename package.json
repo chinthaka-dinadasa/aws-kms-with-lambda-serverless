@@ -1,4 +1,7 @@
 {
+  "name": "aws-kms-with-lambda-serverless",
+  "author": "Chinthaka Dinadasa",
+  "version": "1.0.0",
   "scripts": {
     "prettier": "npx prettier . --check",
     "prettier_fix": "npx prettier . --write",
