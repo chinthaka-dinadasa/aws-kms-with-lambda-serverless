@@ -12,5 +12,8 @@ functions:
           path: /
           method: get
 
+build:
+  esbuild: false
+
 plugins:
   - serverless-plugin-typescript

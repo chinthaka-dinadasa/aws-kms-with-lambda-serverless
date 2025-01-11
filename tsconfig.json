@@ -1,13 +1,13 @@
 {
-    "compilerOptions": {
-      "preserveConstEnums": true,
-      "strictNullChecks": true,
-      "sourceMap": true,
-      "allowJs": true,
-      "target": "es5",
-      "outDir": ".build",
-      "moduleResolution": "node",
-      "lib": ["es2015"],
-      "rootDir": "./"
-    }
-  }
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "CommonJS",
+    "lib": ["ES2021"],
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

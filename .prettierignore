@@ -1,0 +1,6 @@
+.prettierrc
+dist/*
+package*.json
+README.md
+serverless.yml
+tsconfig.json
