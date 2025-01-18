@@ -16,6 +16,10 @@ export const processDecrytion = async (encryptedData: string) => {
 
   const decryptionResponse = await kmsClient.send(decryptCommand);
   const decryptedText = decryptionResponse.Plaintext;
-  
-  return decryptedText;
+
+  const decoder = new TextDecoder("utf-8");
+  const plaintextString = decoder.decode(decryptedText);
+  console.log('decryptedText', plaintextString);
+
+  return plaintextString;
 };
