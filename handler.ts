@@ -1,6 +1,9 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import { KMSClient, DecryptCommandInput, DecryptCommand } from "@aws-sdk/client-kms";
+import { SecretsManagerClient, ListSecretsCommand } from "@aws-sdk/client-secrets-manager";
 const kmsClient = new KMSClient({ region: process.env.AWS_REGION });
+const secretsManagerClient = new SecretsManagerClient({ region: process.env.AWS_REGION });
+
 interface Response {
   statusCode: number;
   body: string;
