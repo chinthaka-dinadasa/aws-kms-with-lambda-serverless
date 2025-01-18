@@ -11,11 +11,6 @@ provider:
           Action:
             - kms:Decrypt
           Resource: 'arn:aws:kms:${self:provider.region}:${aws:accountId}:key/113acdb3-7ee6-450d-aa97-1f4357a31565'
-        - Effect: Allow
-          Action:
-            - secretsmanager:GetSecretValue
-            - secretsmanager:ListSecrets
-          Resource: 'arn:aws:secretsmanager:${self:provider.region}:${aws:accountId}:secret:staging/app/secrets-naS2vT'
   environment:
     APP_CONFIG_DATABASE_PASSWORD: 'AQICAHihlS5aRA7q8a+tmjyMu5ZTZFveSlCch/oTKWNdruJvxAGHR24VK1iwZ5WSsi76bFrdAAAAazBpBgkqhkiG9w0BBwagXDBaAgEAMFUGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMtCI5SuSPJmFvuxkfAgEQgChxexxyVtnoh469g541vQZk6jEzB98an9osi9LqBVgf7p/shy3kqf6K'
     APP_CONFIG_KMS_KEY_ARN: 'arn:aws:kms:${self:provider.region}:${aws:accountId}:key/113acdb3-7ee6-450d-aa97-1f4357a31565'
