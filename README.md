@@ -10,11 +10,9 @@ Features
 🛠️ Serverless Framework: Simplifies deployment and management of AWS Lambda functions.
 🔒 Environment Variables: Securely manages secrets and configurations.
 
-### Common Commands
+### Original Articles Published Using This REPO
 
-```$ aws kms encrypt --region <key_region> --key-id <key_arn> --plaintext "$(echo 'nAgEsIumnaNd' | base64)"```
-
-```$ aws kms decrypt --region <key_region> --ciphertext-blob '<encrypted_value>' --key-id <key_arn>```
+[Unlocking Secrets in the Cloud: How AWS KMS and Lambda Work Together to Secure Your Applications](https://medium.com/@chinthakadinadasa/unlocking-secrets-in-the-cloud-how-aws-kms-and-lambda-work-together-to-secure-your-applications-028cec67f755)
 
 ### Contributing
 - Fork the repository.
