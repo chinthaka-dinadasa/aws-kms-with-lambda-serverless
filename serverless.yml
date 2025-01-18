@@ -13,15 +13,16 @@ provider:
           Resource: 'arn:aws:kms:${self:provider.region}:${aws:accountId}:key/113acdb3-7ee6-450d-aa97-1f4357a31565'
 
   environment:
-    APP_CONFIG_DATABASE_PASSWORD: 'AQICAHihlS5aRA7q8a+tmjyMu5ZTZFveSlCch/oTKWNdruJvxAGHR24VK1iwZ5WSsi76bFrdAAAAazBpBgkqhkiG9w0BBwagXDBaAgEAMFUGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMtCI5SuSPJmFvuxkfAgEQgChxexxyVtnoh469g541vQZk6jEzB98an9osi9LqBVgf7p/shy3kqf6K'
+    APP_CONFIG_DATABASE_PASSWORD: 'AQICAHihlS5aRA7q8a+tmjyMu5ZTZFveSlCch/oTKWNdruJvxAHeYArMdrAPZb48sS09RXSaAAAAdzB1BgkqhkiG9w0BBwagaDBmAgEAMGEGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM7AYAsR424G1PtIxQAgEQgDSl5GouhLeZR0bWHv52TIIDoZvrVW63all4fbN4hczCP/eMmtgnd5NxROQ6eC1ZEBX8QZbF'
+    APP_CONFIG_FACEBOOK_PAGE_LONG_ACCESS_TOKEN: 'AQICAHihlS5aRA7q8a+tmjyMu5ZTZFveSlCch/oTKWNdruJvxAFPBoTiwvy3TfTtK2esjP1bAAAA2jCB1wYJKoZIhvcNAQcGoIHJMIHGAgEAMIHABgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDHF79MRJBn92BhAj8AIBEICBkoMbS2ui23CXUt/iQHWntEEDDqh/8b/EU5zYQxYds/EiTbCPM1n8c71rlWjUWIsCR2O13gyHGB1LKigyn2kNl7Gmmnvc4kHmg/BSKeaRGJ+KTbW/pYFXA2CsaJIEENFZ71WEi2IS9GbSiu9yuPkiaD4aiZrwZ8RzoWUXlkYwllmwdoGh5rmXXa91BH0oxu68RHNO'
     APP_CONFIG_KMS_KEY_ARN: 'arn:aws:kms:${self:provider.region}:${aws:accountId}:key/113acdb3-7ee6-450d-aa97-1f4357a31565'
 functions:
-  hello:
-    handler: handler.hello
+  processDecryption:
+    handler: handler.processDecryption
     events:
       - httpApi:
-          path: /
-          method: get
+          path: /process-decryption
+          method: post
 
 build:
   esbuild: false
